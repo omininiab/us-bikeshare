@@ -1,6 +1,8 @@
-# Explore US Bikeshare Data
+### Date created
+October 2019
 
-My python project from Udacity's Programming-for-Data-Science Nanodegree
+### Project Title
+Explore US Bikeshare Data
 
 ## Overview
 
