@@ -1,15 +1,25 @@
-### Date created
-Include the date you created this project and README file.
+# Explore US Bikeshare Data
 
-### Project Title
-Replace the Project Title
+My python project from Udacity's Programming-for-Data-Science Nanodegree
 
-### Description
-Describe what your project is about and what it does
+## Overview
 
-### Files used
-Include the files used
+In this project, I used Python to explore data related to bike share systems for three major cities in the United States—Chicago, New York City, and Washington. I import the data from csv files containing data for each city and answer interesting questions about it by computing descriptive statistics. It provides an interactive experience for users such that they can decide how to filter the data.
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+## The Datasets
 
+Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
+- Start Time (e.g., 2017-01-01 00:07:57)
+- End Time (e.g., 2017-01-01 00:20:53)
+- Trip Duration (in seconds - e.g., 776)
+- Start Station (e.g., Broadway & Barry Ave)
+- End Station (e.g., Sedgwick St & North Ave)
+- User Type (Subscriber or Customer)
+
+The Chicago and New York City files also have the following two columns:
+- Gender
+- Birth Year
+
+## Libraries Used
+
+The libraries used in the project include: time, pandas, numpy, and datetime
