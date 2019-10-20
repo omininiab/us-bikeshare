@@ -92,12 +92,13 @@ def load_data(city, month, day):
 
     return df
 
-def preview_data(df, i = 0):
-    preview_data = input("Would you like to preview a sample of the data? (Y/N)").title()
+def preview_data(df, i = 1):
+    message = "Would you like to preview a sample of the data (max: 25 lines)? (Y/N)"
+    preview_data = input(message).title()
 
     while preview_data == 'Y' and i <= 20:
         i += 5
-        print(df.head(i))
+        print(df.iloc[:i])
         preview_data = input("See more? (Y/N)").title()
 
 def time_stats(df):
@@ -206,7 +207,7 @@ def main():
         preview_data(df)
 
         start_time = time.time()
-        
+
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
