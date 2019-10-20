@@ -93,6 +93,8 @@ def load_data(city, month, day):
     return df
 
 def preview_data(df, i = 0):
+    """Repeatedly asks user if they'd like to preview the raw data and acts accordingly"""
+    
     preview_data = input("Would you like to preview a sample of the data? (Y/N)").title()
 
     while preview_data == 'Y' and i <= 20:
