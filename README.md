@@ -25,3 +25,7 @@ The Chicago and New York City files also have the following two columns:
 ### Libraries Used
 
 The libraries used in the project include: time, pandas, numpy, and datetime.
+
+### Credits
+
+This project was done as part of Udacity's Nanodegree - Programming for Data Science with Python. Starter code, instructions and clean datasets were provided by Udacity.
