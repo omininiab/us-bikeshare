@@ -92,12 +92,13 @@ def load_data(city, month, day):
 
     return df
 
-def preview_data(df, i = 1):
+def preview_data(df,city, month, day, i = 1):
     message = "Would you like to preview a sample of the data (max: 25 lines)? (Y/N)"
     preview_data = input(message).title()
 
     while preview_data == 'Y' and i <= 20:
         i += 5
+        print("\nSample data from {}\nMonth: {}; Day of week: {}\n".format(city.title(),month,day))
         print(df.iloc[:i])
         preview_data = input("See more? (Y/N)").title()
 
@@ -204,7 +205,7 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        preview_data(df)
+        preview_data(df, city, month, day, 1)
 
         start_time = time.time()
 
