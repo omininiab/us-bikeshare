@@ -91,15 +91,17 @@ def load_data(city, month, day):
         df = df[df['day_of_week'] == day.title()]
 
     return df
-
-def preview_data(df, i = 0):
-    """Repeatedly asks user if they'd like to preview the raw data and acts accordingly"""
     
-    preview_data = input("Would you like to preview a sample of the data? (Y/N)").title()
+def preview_data(df,city, month, day, i = 1):
+    """Repeatedly asks user if they'd like to preview the raw data and acts accordingly"""
+
+    message = "Would you like to preview a sample of the data (max: 25 lines)? (Y/N)"
+    preview_data = input(message).title()
 
     while preview_data == 'Y' and i <= 20:
         i += 5
-        print(df.head(i))
+        print("\nSample data from {}\nMonth: {}; Day of week: {}\n".format(city.title(),month,day))
+        print(df.iloc[:i])
         preview_data = input("See more? (Y/N)").title()
 
 def time_stats(df):
@@ -205,12 +207,17 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        preview_data(df)
+        preview_data(df, city, month, day, 1)
+
+        start_time = time.time()
 
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
+
+        print('-'*40)
+        print("\nTotal time: %s seconds." % (time.time() - start_time))
 
         restart = input('\nWould you like to restart? (Y/N).\n').title()
         if restart != 'Y':
