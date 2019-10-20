@@ -201,12 +201,12 @@ def user_stats(df):
 
 def main():
     while True:
-        start_time = time.time()
-
         city, month, day = get_filters()
         df = load_data(city, month, day)
         preview_data(df)
 
+        start_time = time.time()
+        
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
