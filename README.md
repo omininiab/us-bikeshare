@@ -8,9 +8,9 @@ Explore US Bikeshare Data
 
 In this project, I used Python to explore data related to bike share systems for three major cities in the United States — Chicago, New York City, and Washington. I import the data from csv files containing data for each city and answer interesting questions about it by computing descriptive statistics. It provides an interactive experience for users such that they can decide how to filter the data.
 
-## The Datasets
+### Files Used
 
-Randomly selected data for the first six months of 2017 are provided for all three cities. All three of the data files contain the same core six (6) columns:
+Randomly selected data for the first six months of 2017 are provided for all three cities in .csv format ('chicago.csv'; 'new_york_city.csv'; 'washington.csv'). All three of the data files contain the same core six (6) columns:
 - Start Time (e.g., 2017-01-01 00:07:57)
 - End Time (e.g., 2017-01-01 00:20:53)
 - Trip Duration (in seconds - e.g., 776)
@@ -22,6 +22,6 @@ The Chicago and New York City files also have the following two columns:
 - Gender
 - Birth Year
 
-## Libraries Used
+### Libraries Used
 
-The libraries used in the project include: time, pandas, numpy, and datetime
+The libraries used in the project include: time, pandas, numpy, and datetime.
