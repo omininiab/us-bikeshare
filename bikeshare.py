@@ -95,6 +95,7 @@ def load_data(city, month, day):
 def preview_data(df,city, month, day, i = 1):
     """Repeatedly asks user if they'd like to preview the raw data and acts accordingly"""
 
+def preview_data(df,city, month, day, i = 1):
     message = "Would you like to preview a sample of the data (max: 25 lines)? (Y/N)"
     preview_data = input(message).title()
 
